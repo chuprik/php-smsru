@@ -1,0 +1,20 @@
+{
+    "name": "baibaratsky/php-smsru",
+    "description": "SMS.RU API PHP Library",
+    "keywords": ["sms", "sms.ru"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Constantin Chuprik",
+            "email": "constantinchuprik@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Kotchuprik\\": "lib/"
+        }
+    }
+}
