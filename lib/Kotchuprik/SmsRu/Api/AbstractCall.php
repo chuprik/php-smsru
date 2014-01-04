@@ -16,7 +16,14 @@ abstract class AbstractCall
         $this->authParams = $authParams;
     }
 
-    abstract public function getData();
+    public function getData()
+    {
+        return array_merge($this->authParams->getData(), $this->getCallParams());
+    }
+
+    abstract public function getCallParams();
+
+    abstract public function getUrl();
 
     abstract public function isSuccess();
 }

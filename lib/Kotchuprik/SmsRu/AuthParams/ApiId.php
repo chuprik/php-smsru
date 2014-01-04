@@ -9,4 +9,14 @@ class ApiId implements AuthParamsInterface
     {
         $this->apiId = $apiId;
     }
+
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return array(
+            'api_id' => $this->apiId,
+        );
+    }
 }

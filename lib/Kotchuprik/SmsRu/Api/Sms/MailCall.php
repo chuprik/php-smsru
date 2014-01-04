@@ -5,5 +5,19 @@ use Kotchuprik\SmsRu\Api\AbstractCall;
 
 class MailCall extends AbstractCall
 {
-    s
+    public function getCallParams()
+    {
+    }
+
+    public function getUrl()
+    {
+    }
+
+    public function getResponseCodes()
+    {
+    }
+
+    public function processResponse($response)
+    {
+    }
 }

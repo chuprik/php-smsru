@@ -3,7 +3,7 @@ namespace Kotchuprik\SmsRu\Api\Sms;
 
 use Kotchuprik\SmsRu\Api\AbstractHttpCall;
 
-class CostCall extends AbstractHttpCall
+class StatusCall extends AbstractHttpCall
 {
     public function getCallParams()
     {
@@ -32,7 +32,7 @@ class CostCall extends AbstractHttpCall
             '220' => 'Сервис временно недоступен, попробуйте чуть позже.',
             '300' => 'Неправильный token (возможно истек срок действия, либо ваш IP изменился)',
             '301' => 'Неправильный пароль, либо пользователь не найден',
-            '302' => 'Пользователь авторизован, но аккаунт не подтвержден (пользователь не ввел код, присланный в регистрационной смс)',
+            '302' => 'Пользователь авторизован, но аккаунт не подтвержден (пользователь не ввел код, присланный в регистрационной смс)'
         );
     }
 
