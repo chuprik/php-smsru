@@ -1,5 +1,5 @@
 <?php
-namespace Kotchuprik\SmsRu\Exception;
+namespace kotchuprik\SmsRu\Exception;
 
 class CurlException extends \Exception
 {

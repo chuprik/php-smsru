@@ -1,5 +1,5 @@
 <?php
-namespace Kotchuprik\SmsRu\AuthParams;
+namespace kotchuprik\SmsRu\AuthParams;
 
 class ApiId implements AuthParamsInterface
 {

@@ -1,8 +1,9 @@
 {
-    "name": "baibaratsky/php-smsru",
+    "name": "kotchuprik/php-smsru",
     "description": "SMS.RU API PHP Library",
     "keywords": ["sms", "sms.ru"],
     "license": "MIT",
+    "homepage": "https://github.com/kotchuprik/php-smsru",
     "authors": [
         {
             "name": "Constantin Chuprik",
@@ -13,8 +14,8 @@
         "php": ">=5.3"
     },
     "autoload": {
-        "psr-0": {
-            "Kotchuprik\\": "lib/"
+        "psr-4": {
+            "kotchuprik\\SmsRu\\": ""
         }
     }
 }

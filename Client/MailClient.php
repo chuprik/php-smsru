@@ -1,7 +1,7 @@
 <?php
-namespace Kotchuprik\SmsRu\Client;
+namespace kotchuprik\SmsRu\Client;
 
-use Kotchuprik\SmsRu\Api\AbstractCall;
+use kotchuprik\SmsRu\Api\AbstractCall;
 
 class MailClient implements ClientInterface
 {
@@ -12,7 +12,7 @@ class MailClient implements ClientInterface
      */
     public function perform(AbstractCall $apiCall)
     {
-        if (!$apiCall instanceof \Kotchuprik\SmsRu\Api\Sms\MailCall) {
+        if (!$apiCall instanceof \kotchuprik\SmsRu\Api\Sms\MailCall) {
             throw new \Exception('This client can\'t perform this Call.');
         }
     }

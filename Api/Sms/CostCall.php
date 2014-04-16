@@ -1,7 +1,7 @@
 <?php
-namespace Kotchuprik\SmsRu\Api\Sms;
+namespace kotchuprik\SmsRu\Api\Sms;
 
-use Kotchuprik\SmsRu\Api\AbstractHttpCall;
+use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
 class CostCall extends AbstractHttpCall
 {

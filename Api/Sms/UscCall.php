@@ -1,9 +1,9 @@
 <?php
-namespace Kotchuprik\SmsRu\Api\Sms;
+namespace kotchuprik\SmsRu\Api\Sms;
 
-use Kotchuprik\SmsRu\Api\AbstractCall;
+use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
-class MailCall extends AbstractCall
+class UscCall extends AbstractHttpCall
 {
     public function getCallParams()
     {

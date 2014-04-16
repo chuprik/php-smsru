@@ -1,9 +1,9 @@
 <?php
-namespace Kotchuprik\SmsRu\Client;
+namespace kotchuprik\SmsRu\Client;
 
-use Kotchuprik\SmsRu\Api\AbstractCall;
-use Kotchuprik\SmsRu\Api\AbstractHttpCall;
-use Kotchuprik\SmsRu\Exception\CurlException;
+use kotchuprik\SmsRu\Api\AbstractCall;
+use kotchuprik\SmsRu\Api\AbstractHttpCall;
+use kotchuprik\SmsRu\Exception\CurlException;
 
 class HttpClient implements ClientInterface
 {

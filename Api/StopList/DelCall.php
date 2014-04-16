@@ -1,7 +1,7 @@
 <?php
-namespace Kotchuprik\SmsRu\Api\StopList;
+namespace kotchuprik\SmsRu\Api\StopList;
 
-use Kotchuprik\SmsRu\Api\AbstractHttpCall;
+use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
 class DelCall extends AbstractHttpCall
 {

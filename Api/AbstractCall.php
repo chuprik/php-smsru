@@ -1,7 +1,7 @@
 <?php
-namespace Kotchuprik\SmsRu\Api;
+namespace kotchuprik\SmsRu\Api;
 
-use Kotchuprik\SmsRu\AuthParams\AuthParamsInterface;
+use kotchuprik\SmsRu\AuthParams\AuthParamsInterface;
 
 abstract class AbstractCall
 {

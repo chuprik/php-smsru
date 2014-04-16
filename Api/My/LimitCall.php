@@ -1,7 +1,7 @@
 <?php
-namespace Kotchuprik\SmsRu\Api\My;
+namespace kotchuprik\SmsRu\Api\My;
 
-use Kotchuprik\SmsRu\Api\AbstractHttpCall;
+use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
 class LimitCall extends AbstractHttpCall
 {

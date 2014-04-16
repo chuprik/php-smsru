@@ -1,5 +1,5 @@
 <?php
-namespace Kotchuprik\SmsRu\Api;
+namespace kotchuprik\SmsRu\Api;
 
 abstract class AbstractHttpCall extends AbstractCall
 {

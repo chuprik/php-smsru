@@ -1,7 +1,7 @@
 <?php
-namespace Kotchuprik\SmsRu\Client;
+namespace kotchuprik\SmsRu\Client;
 
-use Kotchuprik\SmsRu\Api\AbstractCall;
+use kotchuprik\SmsRu\Api\AbstractCall;
 
 interface ClientInterface
 {

@@ -1,9 +1,9 @@
 <?php
-namespace Kotchuprik\SmsRu\Api\Sms;
+namespace kotchuprik\SmsRu\Api\My;
 
-use Kotchuprik\SmsRu\Api\AbstractHttpCall;
+use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
-class StatusCall extends AbstractHttpCall
+class SendersCall extends AbstractHttpCall
 {
     public function getCallParams()
     {
@@ -16,16 +16,7 @@ class StatusCall extends AbstractHttpCall
     public function getResponseCodes()
     {
         return array(
-            '-1' => 'Сообщение не найдено.',
-            '100' => 'Сообщение находится в нашей очереди',
-            '101' => 'Сообщение передается оператору',
-            '102' => 'Сообщение отправлено (в пути)',
-            '103' => 'Сообщение доставлено',
-            '104' => 'Не может быть доставлено: время жизни истекло',
-            '105' => 'Не может быть доставлено: удалено оператором',
-            '106' => 'Не может быть доставлено: сбой в телефоне',
-            '107' => 'Не может быть доставлено: неизвестная причина',
-            '108' => 'Не может быть доставлено: отклонено',
+            '100' => 'Запрос выполнен. На второй и последующих строчках вы найдете ваших одобренных отправителей, которые можно использовать в параметре &from= метода sms/send.',
             '200' => 'Неправильный api_id',
             '210' => 'Используется GET, где необходимо использовать POST',
             '211' => 'Метод не найден',

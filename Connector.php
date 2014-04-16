@@ -1,9 +1,9 @@
 <?php
-namespace Kotchuprik\SmsRu;
+namespace kotchuprik\SmsRu;
 
-use Kotchuprik\SmsRu\Api\AbstractCall;
-use Kotchuprik\SmsRu\AuthParams\AuthParamsInterface;
-use Kotchuprik\SmsRu\Client\ClientInterface;
+use kotchuprik\SmsRu\Api\AbstractCall;
+use kotchuprik\SmsRu\AuthParams\AuthParamsInterface;
+use kotchuprik\SmsRu\Client\ClientInterface;
 
 class Connector
 {
