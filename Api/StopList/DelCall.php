@@ -16,12 +16,12 @@ class DelCall extends AbstractHttpCall
     public function getResponseCodes()
     {
         return array(
-            '100' => 'Номер удален из стоплиста.',
+            '100' => 'Номер удален из стоплиста',
             '202' => 'Номер телефона в неправильном формате'
         );
     }
 
-    public function processResponse($response)
+    protected function populateCall(array $data)
     {
     }
 }

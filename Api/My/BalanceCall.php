@@ -21,7 +21,7 @@ class BalanceCall extends AbstractHttpCall
     public function getResponseCodes()
     {
         return array(
-            100 => 'Запрос выполнен. На второй строчке вы найдете ваше текущее состояние баланса.',
+            100 => 'Запрос выполнен',
             200 => 'Неправильный api_id',
             210 => 'Используется GET, где необходимо использовать POST',
             211 => 'Метод не найден',
@@ -40,15 +40,8 @@ class BalanceCall extends AbstractHttpCall
         return $this->responseBalance;
     }
 
-    public function processResponse($response)
+    protected function populateCall(array $data)
     {
-        $parsed = explode(PHP_EOL, $response);
-        $codes = $this->getResponseCodes();
-        $this->responseCode = $parsed[0];
-        $this->responseDescription = $codes[$this->responseCode];
-
-        if ($this->responseCode == 100) {
-            $this->responseBalance = $parsed[1];
-        }
+        $this->responseBalance = (float)$data[0];
     }
 }

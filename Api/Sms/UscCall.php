@@ -17,7 +17,7 @@ class UscCall extends AbstractHttpCall
     {
     }
 
-    public function processResponse($response)
+    protected function populateCall(array $data)
     {
     }
 }

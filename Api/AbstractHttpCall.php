@@ -3,6 +3,8 @@ namespace kotchuprik\SmsRu\Api;
 
 abstract class AbstractHttpCall extends AbstractCall
 {
+    const SUCCESS_CODE = 100;
+
     /** @var int */
     protected $responseCode;
 
@@ -11,7 +13,20 @@ abstract class AbstractHttpCall extends AbstractCall
 
     abstract public function getResponseCodes();
 
-    abstract public function processResponse($response);
+    public function processResponse($response)
+    {
+        $parsed = explode(PHP_EOL, $response);
+        $codes = $this->getResponseCodes();
+        $this->responseCode = $parsed[0];
+        $this->responseDescription = $codes[$this->responseCode];
+
+        if ($this->responseCode == self::SUCCESS_CODE) {
+            unset($parsed[0]);
+            $this->populateCall($parsed);
+        }
+    }
+
+    abstract protected function populateCall(array $data);
 
     /**
      * @return int

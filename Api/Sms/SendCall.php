@@ -16,7 +16,7 @@ class SendCall extends AbstractHttpCall
     public function getResponseCodes()
     {
         return array(
-            '100' => 'Сообщение принято к отправке. На следующих строчках вы найдете идентификаторы отправленных сообщений в том же порядке, в котором вы указали номера, на которых совершалась отправка.',
+            '100' => 'Сообщение принято к отправке',
             '200' => 'Неправильный api_id',
             '201' => 'Не хватает средств на лицевом счету',
             '202' => 'Неправильно указан получатель',
@@ -36,7 +36,7 @@ class SendCall extends AbstractHttpCall
         );
     }
 
-    public function processResponse($response)
+    protected function populateCall(array $data)
     {
     }
 }

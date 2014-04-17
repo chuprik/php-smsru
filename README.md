@@ -16,3 +16,5 @@ $apiCall = new SmsRu\Api\My\BalanceCall();
 
 $connector->call($apiCall);
 ```
+
+## The PHP Library is not completed. Do not use in Your code.

@@ -17,7 +17,7 @@ class MailCall extends AbstractCall
     {
     }
 
-    public function processResponse($response)
+    public function isSuccess()
     {
     }
 }

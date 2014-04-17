@@ -5,18 +5,23 @@ use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
 class SendersCall extends AbstractHttpCall
 {
+    /** @var array */
+    protected $senders;
+
     public function getCallParams()
     {
+        return array();
     }
 
     public function getUrl()
     {
+        return 'http://sms.ru/my/senders';
     }
 
     public function getResponseCodes()
     {
         return array(
-            '100' => 'Запрос выполнен. На второй и последующих строчках вы найдете ваших одобренных отправителей, которые можно использовать в параметре &from= метода sms/send.',
+            '100' => 'Запрос выполнен',
             '200' => 'Неправильный api_id',
             '210' => 'Используется GET, где необходимо использовать POST',
             '211' => 'Метод не найден',
@@ -27,7 +32,16 @@ class SendersCall extends AbstractHttpCall
         );
     }
 
-    public function processResponse($response)
+    /**
+     * @return array
+     */
+    public function getSenders()
     {
+        return $this->senders;
+    }
+
+    protected function populateCall(array $data)
+    {
+        $this->senders = $data;
     }
 }

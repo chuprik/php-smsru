@@ -5,18 +5,26 @@ use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
 class LimitCall extends AbstractHttpCall
 {
+    /** @var int */
+    protected $total;
+
+    /** @var int */
+    protected $today;
+
     public function getCallParams()
     {
+        return array();
     }
 
     public function getUrl()
     {
+        return 'http://sms.ru/my/limit';
     }
 
     public function getResponseCodes()
     {
         return array(
-            '100' => 'Запрос выполнен. На второй строчке вы найдете ваше текущее дневное ограничение. На третьей строчке количество сообщений, отправленных вами в текущий день.',
+            '100' => 'Запрос выполнен',
             '200' => 'Неправильный api_id',
             '210' => 'Используется GET, где необходимо использовать POST',
             '211' => 'Метод не найден',
@@ -27,7 +35,25 @@ class LimitCall extends AbstractHttpCall
         );
     }
 
-    public function processResponse($response)
+    /**
+     * @return int
+     */
+    public function getToday()
     {
+        return $this->today;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+
+    protected function populateCall(array $data)
+    {
+        $this->total = (int)$data[0];
+        $this->today = (int)$data[1];
     }
 }

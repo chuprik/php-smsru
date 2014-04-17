@@ -16,12 +16,12 @@ class AddCall extends AbstractHttpCall
     public function getResponseCodes()
     {
         return array(
-            '100' => 'Номер добавлен в стоплист.',
+            '100' => 'Номер добавлен в стоплист',
             '202' => 'Номер телефона в неправильном формате',
         );
     }
 
-    public function processResponse($response)
+    protected function populateCall(array $data)
     {
     }
 }

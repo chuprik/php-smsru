@@ -16,11 +16,11 @@ class GetCall extends AbstractHttpCall
     public function getResponseCodes()
     {
         return array(
-            '100' => 'Запрос обработан. На последующих строчках будут идти номера телефонов, указанных в стоплисте в формате номер;примечание.',
+            '100' => 'Запрос обработан',
         );
     }
 
-    public function processResponse($response)
+    protected function populateCall(array $data)
     {
     }
 }

@@ -11,4 +11,15 @@ class LoginPassword implements AuthParamsInterface
         $this->login = $login;
         $this->password = $password;
     }
+
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return array(
+            'login' => $this->login,
+            'password' => $this->password,
+        );
+    }
 }

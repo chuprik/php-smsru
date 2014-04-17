@@ -16,7 +16,7 @@ class CostCall extends AbstractHttpCall
     public function getResponseCodes()
     {
         return array(
-            '-1' => 'Сообщение не найдено.',
+            '-1' => 'Сообщение не найдено',
             '100' => 'Сообщение находится в нашей очереди',
             '101' => 'Сообщение передается оператору',
             '102' => 'Сообщение отправлено (в пути)',
@@ -36,7 +36,7 @@ class CostCall extends AbstractHttpCall
         );
     }
 
-    public function processResponse($response)
+    protected function populateCall(array $data)
     {
     }
 }
