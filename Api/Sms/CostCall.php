@@ -5,12 +5,23 @@ use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
 class CostCall extends AbstractHttpCall
 {
+    /** @var string */
+    protected $phone;
+
+    /** @var string */
+    protected $message;
+
     public function getCallParams()
     {
+        return array(
+            'to' => $this->phone,
+            'text' => $this->message,
+        );
     }
 
     public function getUrl()
     {
+        return 'http://sms.ru/sms/cost';
     }
 
     public function getResponseCodes()
@@ -34,6 +45,38 @@ class CostCall extends AbstractHttpCall
             '301' => 'Неправильный пароль, либо пользователь не найден',
             '302' => 'Пользователь авторизован, но аккаунт не подтвержден (пользователь не ввел код, присланный в регистрационной смс)',
         );
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param string $phone
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param string $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
     }
 
     protected function populateCall(array $data)

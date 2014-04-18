@@ -5,12 +5,19 @@ use kotchuprik\SmsRu\Api\AbstractHttpCall;
 
 class StatusCall extends AbstractHttpCall
 {
+    /** @var string */
+    protected $id;
+
     public function getCallParams()
     {
+        return array(
+            'id' => $this->id,
+        );
     }
 
     public function getUrl()
     {
+        return 'http://sms.ru/sms/status';
     }
 
     public function getResponseCodes()
@@ -36,7 +43,24 @@ class StatusCall extends AbstractHttpCall
         );
     }
 
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
     protected function populateCall(array $data)
     {
+
     }
 }

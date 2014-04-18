@@ -11,6 +11,7 @@ class SendCall extends AbstractHttpCall
 
     public function getUrl()
     {
+        return 'http://sms.ru/sms/send';
     }
 
     public function getResponseCodes()
